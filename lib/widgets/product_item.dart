@@ -24,7 +24,9 @@ class ProductItem extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "TMA-2 HD Wireless",
               style: TextStyle(
@@ -33,8 +35,10 @@ class ProductItem extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 fontFamily: GoogleFonts.dmSans().fontFamily,
               ),
-              ),
-              SizedBox(height: 10,),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Rp. 1.500.000",
               style: TextStyle(
@@ -43,7 +47,9 @@ class ProductItem extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.max,
@@ -51,14 +57,19 @@ class ProductItem extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.star,
-                    color: Colors.yellow,
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
                     ),
-                    SizedBox(width: 5.0,),
+                    SizedBox(
+                      width: 5.0,
+                    ),
                     Text('4.0')
                   ],
                 ),
-                Text('28 Reviews',),
+                Text(
+                  '86 Reviews',
+                ),
                 Icon(Icons.more_vert)
               ],
             ),
