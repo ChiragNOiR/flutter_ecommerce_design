@@ -7,6 +7,7 @@ import 'appbar.dart';
 
 class CartDetails extends StatelessWidget {
   const CartDetails({
+    
     Key? key,
   }) : super(key: key);
 

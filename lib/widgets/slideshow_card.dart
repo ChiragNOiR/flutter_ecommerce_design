@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CarouselCard extends StatelessWidget {
   const CarouselCard({Key? key}) : super(key: key);
@@ -52,6 +53,39 @@ class CarouselCard extends StatelessWidget {
               ),
               child: Stack(
                 children: [
+                  Center(
+                    child: RichText(
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Gatis Ongkir \n',
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25
+                            ),
+                            ),
+                          TextSpan(
+                            text: 'Selama PPKM! \n',
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                            ),
+                            ),
+                          
+                          TextSpan(
+                            text: 'Periode Mei - Agustus 2021',
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                               height: 2,
+                               fontSize: 11.5
+                            ),
+                            ),
+                        ] 
+                        ),
+                        ),
+                  ),
                   GridView.count(
                     primary: false,
                     crossAxisSpacing: 1,

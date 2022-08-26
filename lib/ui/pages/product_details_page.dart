@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_application/widgets/appbar.dart';
 
-import '../../widgets/detail_product_2_heading.dart';
-import '../../widgets/detail_product_heading.dart';
+import '../../widgets/Feature Products/detail_product_2_heading.dart';
+import '../../widgets/Feature Products/detail_product_heading.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({Key? key}) : super(key: key);

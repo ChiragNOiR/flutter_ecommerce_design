@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'appbar.dart';
+import '../appbar.dart';
 
 class DetailProductHeading extends StatelessWidget {
   const DetailProductHeading({
@@ -18,13 +18,15 @@ class DetailProductHeading extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              decoration: BoxDecoration(color: Color(0xFFFAFAFA)),
+              decoration: BoxDecoration(
+                color: Color(0xFFFAFAFA),
+                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                ),
               child: InkWell(
                 child: Center(
                   child: Image.asset(
                     'image/headphone.png',
                     height: 300,
-                    
                   ),
                 ),
               ),
@@ -79,11 +81,39 @@ class DetailProductHeading extends StatelessWidget {
                         ],
                       ),
                       Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
-                      Text(
-                        '86 Reviews',
-                        style: TextStyle(
-                          fontFamily: GoogleFonts.dmSans().fontFamily,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            '86 Reviews',
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 60,
+                          ),
+                          SizedBox(
+                            width: 107,
+                            height: 20,
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Color(0xFFE5F6DF),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              child: Text(
+                                "Tersedia: 250",
+                                style: (TextStyle(
+                                  fontFamily: GoogleFonts.dmSans().fontFamily,
+                                  fontSize: 12,
+                                  color: Colors.green,
+                                )),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),

@@ -19,7 +19,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         title: Text(
           title,
-          style: (TextStyle(color: Colors.black)),
+          style:(
+            TextStyle(
+              color: Colors.black,
+              fontFamily: GoogleFonts.dmSans().fontFamily,
+              fontWeight: FontWeight.bold,
+              )
+              ),
         ),
         elevation: 1.0,
         shadowColor: Colors.grey.shade50,
