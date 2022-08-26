@@ -3,10 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'appbar.dart';
 
-class DetailProductHeading extends StatelessWidget {
-  const DetailProductHeading({
-    Key? key,
-  }) : super(key: key);
+
+class DetailProductHeading2 extends StatelessWidget {
+  const DetailProductHeading2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +21,8 @@ class DetailProductHeading extends StatelessWidget {
               child: InkWell(
                 child: Center(
                   child: Image.asset(
-                    'image/headphone.png',
+                    'image/tma_2.png',
                     height: 300,
-                    
                   ),
                 ),
               ),
