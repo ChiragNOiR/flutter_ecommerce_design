@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'appbar.dart';
 
@@ -9,44 +11,42 @@ class CartDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(title: 'Cart',),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: GridView.count(
-          crossAxisCount: 2,
+    return 
+        Column(
           children: <Widget>[
-            Card(
-              elevation: 1.0,
-              child: ClipRRect(
-                child: Stack(
-                  children: <Widget>[
-                    Image.asset(
-                      'image/tma_2.png',
-                      height: 150,
-                      width: 200,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 160, left: 90),
-                        height: 20,
-                        width: 90,
-                        child: Stack(
-                          children: <Widget>[
-                            Center(
-                              child: Text(
-                                'HHH',
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                  ],
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(20.0),
+                  height: 180,
+                  width: 160,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Image.asset('image/tma_2.png'),
                 ),
-              ),
-            ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20 / 4),
+                  child: Text('TMA-2HD Wireless',
+                  style: TextStyle(
+                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                  ),
+                  ),
+                ),
+                Text('Rp. 1.500.00',
+                style: TextStyle(
+                  fontFamily: GoogleFonts.dmSans().fontFamily,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFFFE3A30)
+                ),
+                ),
+              ],
+            )
           ],
-        ),
-      )
-      );
+        );
   }
 }
