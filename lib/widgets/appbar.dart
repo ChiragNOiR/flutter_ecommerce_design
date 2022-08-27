@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:badges/badges.dart';
@@ -19,13 +18,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         title: Text(
           title,
-          style:(
-            TextStyle(
-              color: Colors.black,
-              fontFamily: GoogleFonts.dmSans().fontFamily,
-              fontWeight: FontWeight.bold,
-              )
-              ),
+          style: (TextStyle(
+            color: Colors.black,
+            fontFamily: GoogleFonts.dmSans().fontFamily,
+            fontWeight: FontWeight.bold,
+          )),
         ),
         elevation: 1.0,
         shadowColor: Colors.grey.shade50,
@@ -34,16 +31,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             onTap: () => Navigator.pushNamed(context, 'shopping_cart'),
             child: Center(
               child: Badge(
-                badgeContent: Text(''),
-                animationDuration: Duration(milliseconds: 300),
-                child: Icon(
+                badgeContent: const Text(''),
+                animationDuration: const Duration(milliseconds: 300),
+                child: const Icon(
                   Icons.shopping_cart_outlined,
                   color: Colors.black,
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20.0,
           ),
         ],

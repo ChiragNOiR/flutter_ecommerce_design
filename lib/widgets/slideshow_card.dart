@@ -55,90 +55,104 @@ class CarouselCard extends StatelessWidget {
                 children: [
                   Center(
                     child: RichText(
-                      text: TextSpan(
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Gatis Ongkir \n',
-                            style: TextStyle(
+                      text: TextSpan(children: <TextSpan>[
+                        TextSpan(
+                          text: 'Gatis Ongkir \n',
+                          style: TextStyle(
                               fontFamily: GoogleFonts.dmSans().fontFamily,
                               fontWeight: FontWeight.bold,
-                              fontSize: 25
-                            ),
-                            ),
-                          TextSpan(
-                            text: 'Selama PPKM! \n',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.dmSans().fontFamily,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                            ),
-                            ),
-                          
-                          TextSpan(
-                            text: 'Periode Mei - Agustus 2021',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.dmSans().fontFamily,
-                               height: 2,
-                               fontSize: 11.5
-                            ),
-                            ),
-                        ] 
+                              fontSize: 25),
                         ),
+                        TextSpan(
+                          text: 'Selama PPKM! \n',
+                          style: TextStyle(
+                            fontFamily: GoogleFonts.dmSans().fontFamily,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                          ),
                         ),
+                        TextSpan(
+                          text: 'Periode Mei - Agustus 2021',
+                          style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              height: 2,
+                              fontSize: 11.5),
+                        ),
+                      ]),
+                    ),
                   ),
-                  GridView.count(
-                    primary: false,
-                    crossAxisSpacing: 1,
-                    mainAxisSpacing: 5,
-                    crossAxisCount: 5,
-                    children: <Widget>[
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
+                  Positioned(
+                    top: 25,
+                    left: 30,
+                    child: Container(
+                      height: 100,
+                      // color: Colors.white,
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                              smallIcons(),
+                            ],
+                          ),
+                        ],
                       ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                      Icon(
-                        Icons.circle,
-                        color: Color(0xff0c1a300d),
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class smallIcons extends StatelessWidget {
+  const smallIcons({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        right: 10,
+      ),
+      child: Icon(
+        Icons.circle,
+        // color: Colors.black,
+        color: Color(0xff0c1a300d),
+
+        size: 10,
       ),
     );
   }

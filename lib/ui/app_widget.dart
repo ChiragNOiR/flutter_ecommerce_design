@@ -33,7 +33,6 @@ class _MyAppState extends State<MyApp> {
       routes: {
         "dashboard":(context) => const Homepage(),
         "product_detail":(context) => const ProductDetail(),
-        "product_detail_2":(context) => const ProductDetail2(),
         "shopping_cart" :(context) => const ShoppingCart(),
       },
     );
